@@ -32,7 +32,8 @@ const MystrixPlugin: SurfacePlugin<HIDDevice> = {
 		logger.debug(`Checked HID device: ${device.manufacturer} ${device.product}`)
 
 		return {
-			surfaceId: `203-mystrix:${device.serialNumber}`, // Use the faked serial number
+			surfaceId: `203-systems:mystrix`, // Use the faked serial number
+			surfaceIdIsNotUnique: true,
 			description: '203 Systems Mystrix',
 			pluginInfo: device,
 		}
